@@ -1,0 +1,18 @@
+#include <iostream>
+#include <array>
+using namespace std;
+void printArray (const array<int,9> arreglo,int inicial,int fin){
+
+    if (inicial<fin){
+        cout << arreglo[inicial] << " ";
+        return printArray(arreglo,inicial+ 1,fin);
+        }
+}
+
+int main (){
+    const array<int,9> arreglo = {9, 8, 7, 6, 5, 4, 3, 2, 1};
+    int n = sizeof(arreglo)/sizeof(arreglo[0]);
+
+    printArray(arreglo,0,n);
+}
+
