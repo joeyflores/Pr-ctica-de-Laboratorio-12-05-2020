@@ -1,0 +1,33 @@
+#include <iostream>
+#include<iomanip>
+using namespace std;
+int main()
+
+{
+  int N=1000;
+  int arr[N];
+  int contador=0;
+  for(int k=0;k<N;k++){
+    arr[k]=1;
+    }
+
+    for(int i=1;i<N;i++){
+        if(arr[i]==1&&i!=1){
+          for(int j=i;j<N;j++){
+            if (j%i==0&&j!=i){
+              arr[j]=0;
+            }
+          }
+        }
+    }
+    int a=2;     //la variable "a" vale 2 porque si empezamos desde 0, daria que el numero 0 y 1 son primos.
+    while(a<N){
+        if(arr[a]==1){
+        cout<<"El numero "<<a<<" es primo"<<endl;
+        contador=contador+1;
+      }
+        a++;
+    }
+    cout << "El total de numeros primos encontrados es: "<<contador;
+
+   }
